@@ -1,5 +1,9 @@
 body {
     background-color: rgb(255,182,193);
+     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -28,8 +32,21 @@ nav {
     justify-content: center;
 }
 
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
 .nav-links li {
-    display: inline;
+    margin: 0 10px;
 }
 
 .nav-links li a {
