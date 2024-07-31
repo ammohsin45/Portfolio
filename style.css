@@ -1,7 +1,7 @@
 body {
-  background-color: pink;
+    background-color: rgb(255,182,193);
 }
-h1{
-  color: blue;
-text-align: center;
+h1 {
+    color: blue;
+    text-align: center;
 }
