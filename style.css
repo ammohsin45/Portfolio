@@ -61,8 +61,17 @@ nav {
 }
 
 #footer {
-    background-color: white;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+#footer a {
+    color: white;  /* Change link color to match the footer text color */
+    text-decoration: none;  /* Remove underline */
+}
+
+#footer a:hover {
+    color: #ddd;  /* Change color on hover */
 }
