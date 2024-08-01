@@ -78,15 +78,14 @@ nav {
 
 .gallery {
     display: flex;
-    flex-wrap: nowrap; /* Change to nowrap to force items into a single row */
-    overflow-x: auto; /* Add horizontal scroll if necessary */
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
 
 .gallery-item {
-    width: 350px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
@@ -132,19 +131,4 @@ nav {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    .gallery {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 5px;
-        padding: 10px;
-        overflow-x: auto; /* Add horizontal scroll for mobile */
-    }
-
-    .gallery-item {
-        flex: 0 0 auto;
-    }
 }
