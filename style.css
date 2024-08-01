@@ -78,14 +78,15 @@ nav {
 
 .gallery {
     display: flex;
+    flex-direction: row;  /* Ensure images are in a horizontal row */
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
 
 .gallery-item {
-    flex: 0 0 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
