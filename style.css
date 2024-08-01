@@ -84,8 +84,8 @@ nav {
 }
 
 .gallery-item {
-    width: 400px;    /* Set width to 400px */
-    height: 300px;   /* Set height to 300px */
+    width: 350px;    /* Set width to 400px */
+    height: 250px;   /* Set height to 300px */
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
