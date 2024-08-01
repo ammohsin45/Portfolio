@@ -83,8 +83,8 @@ nav {
 }
 
 .gallery-item {
-    width: 300px;
-    height: 200px; /* Set a fixed height */
+    width: 400px;
+    height: 300px; /* Set a fixed height */
     object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
     cursor: pointer;
     transition: transform 0.2s;
