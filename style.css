@@ -1,3 +1,4 @@
+/* General body styling */
 body {
     background-color: rgb(255, 182, 193);
     font-family: Arial, sans-serif;
@@ -91,9 +92,8 @@ nav {
 }
 
 .gallery-item {
-    width: calc(33.333% - 10px); /* Three items per row, adjust based on your preference */
-    height: 0;
-    padding-bottom: calc(33.333% - 10px); /* Maintain aspect ratio */
+    width: calc(33.333% - 10px); /* Three items per row */
+    height: 250px; /* Set a fixed height */
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
@@ -145,6 +145,6 @@ nav {
 @media (max-width: 600px) {
     .gallery-item {
         width: calc(50% - 10px); /* Two items per row on smaller screens */
-        padding-bottom: calc(50% - 10px); /* Maintain aspect ratio */
+        height: 200px; /* Adjust height for smaller screens */
     }
 }
