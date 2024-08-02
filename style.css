@@ -92,8 +92,8 @@ nav {
 }
 
 .gallery-item {
-    width: calc(33.333% - 10px); /* Three items per row, adjust based on your preference */
-    height: 250px; /* Fixed height for the gallery items */
+    width: 350px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
