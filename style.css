@@ -92,8 +92,8 @@ nav {
 }
 
 .gallery-item {
-    flex: 1 1 calc(33.333% - 10px); /* Three items per row, adjust based on your preference */
-    max-width: calc(33.333% - 10px);
+    width: calc(33.333% - 10px); /* Three items per row, adjust based on your preference */
+    height: 250px; /* Fixed height for the gallery items */
     position: relative;
     overflow: hidden;
     cursor: pointer;
