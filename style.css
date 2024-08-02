@@ -92,9 +92,8 @@ nav {
 }
 
 .gallery-item {
-    width: calc(33.333% - 10px); /* Three items per row, adjust based on your preference */
-    height: 0;
-    padding-bottom: calc(33.333% - 10px); /* Maintain aspect ratio */
+    width: 250px; /* Set a fixed width */
+    height: 250px; /* Set a fixed height */
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
