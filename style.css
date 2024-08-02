@@ -92,8 +92,9 @@ nav {
 }
 
 .gallery-item {
-    width: calc(33.333% - 10px); /* Three items per row */
-    height: 250px; /* Set a fixed height */
+    width: calc(33.333% - 10px); /* Three items per row, adjust based on your preference */
+    height: 0;
+    padding-bottom: calc(33.333% - 10px); /* Maintain aspect ratio */
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
@@ -139,12 +140,4 @@ nav {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* Responsive design for mobile devices */
-@media (max-width: 600px) {
-    .gallery-item {
-        width: calc(50% - 10px); /* Two items per row on smaller screens */
-        height: 200px; /* Adjust height for smaller screens */
-    }
 }
