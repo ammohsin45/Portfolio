@@ -141,20 +141,6 @@ nav {
     text-decoration: none;
     cursor: pointer;
 }
-figure {
-      display: block;
-      margin: 0;
-      padding: 0;
-   }
-   figcaption {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      font-weight: bold;
-      color: white;
-      margin-top: 10px;
-      background-color: #f1f;
-      padding: 5px;
-   }
 
 /* Responsive design for mobile devices */
 @media (max-width: 600px) {
