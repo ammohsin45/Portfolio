@@ -86,15 +86,15 @@ nav {
 /* Gallery styling */
 .gallery {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
 
 .gallery-item {
-    width: 350px;
-    height: 250px;
+    width: calc(33.333% - 10px); /* Three items per row, adjust based on your preference */
+    height: 0;
+    padding-bottom: calc(33.333% - 10px); /* Maintain aspect ratio */
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
@@ -145,9 +145,7 @@ nav {
 /* Responsive design for mobile devices */
 @media (max-width: 600px) {
     .gallery-item {
-        width: 100%;
-        height: 200px; /* Set a consistent height for mobile */
-        max-width: 100%;
-        object-fit: cover;
+        width: calc(50% - 10px); /* Two items per row on smaller screens */
+        padding-bottom: calc(50% - 10px); /* Maintain aspect ratio */
     }
 }
