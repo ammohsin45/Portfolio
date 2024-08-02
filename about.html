@@ -1,4 +1,3 @@
-/* General body styling */
 body {
     background-color: rgb(255, 182, 193);
     font-family: Arial, sans-serif;
@@ -10,14 +9,18 @@ body {
     height: 100vh;
 }
 
-/* Heading styling */
-h1, h2 {
+h1 {
     color: blue;
     text-align: center;
     font-size: 24px;
 }
 
-/* Page container styling */
+h2 {
+    color: blue;
+    text-align: center;
+    font-size: 24px;
+}
+
 #page-container {
     display: flex;
     flex-direction: column;
@@ -25,13 +28,11 @@ h1, h2 {
     justify-content: space-between;
 }
 
-/* Content wrap styling */
 #content-wrap {
     flex-grow: 1;
     padding: 20px;
 }
 
-/* Navigation styling */
 nav {
     background-color: #333;
 }
@@ -66,7 +67,6 @@ nav {
     color: white;
 }
 
-/* Footer styling */
 #footer {
     background-color: #333;
     color: white;
@@ -83,7 +83,6 @@ nav {
     color: #ddd;
 }
 
-/* Gallery styling */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -92,9 +91,9 @@ nav {
 }
 
 .gallery-item {
-    width: 200px; /* Fixed width for images */
-    height: 200px; /* Fixed height for images */
-    object-fit: cover; /* Ensures images cover the div */
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -139,12 +138,4 @@ nav {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* Responsive design for mobile devices */
-@media (max-width: 600px) {
-    .gallery-item {
-        width: 100%; /* Full width on smaller screens */
-        height: 200px; /* Fixed height for images */
-    }
 }
