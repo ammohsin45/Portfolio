@@ -1,3 +1,4 @@
+/* General body styling */
 body {
     background-color: rgb(255, 182, 193);
     font-family: Arial, sans-serif;
@@ -9,18 +10,14 @@ body {
     height: 100vh;
 }
 
-h1 {
+/* Heading styling */
+h1, h2 {
     color: blue;
     text-align: center;
     font-size: 24px;
 }
 
-h2 {
-    color: blue;
-    text-align: center;
-    font-size: 24px;
-}
-
+/* Page container styling */
 #page-container {
     display: flex;
     flex-direction: column;
@@ -28,11 +25,13 @@ h2 {
     justify-content: space-between;
 }
 
+/* Content wrap styling */
 #content-wrap {
     flex-grow: 1;
     padding: 20px;
 }
 
+/* Navigation styling */
 nav {
     background-color: #333;
 }
@@ -67,6 +66,7 @@ nav {
     color: white;
 }
 
+/* Footer styling */
 #footer {
     background-color: #333;
     color: white;
@@ -83,8 +83,10 @@ nav {
     color: #ddd;
 }
 
+/* Gallery styling */
 .gallery {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
@@ -138,4 +140,12 @@ nav {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    .gallery-item {
+        width: 100%;
+        height: auto;
+    }
 }
