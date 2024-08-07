@@ -1,12 +1,10 @@
 <?php
-if (isset($_POST['Email'])) {
-
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "ammohsin1995@gmail.com";
     $email_subject = "New form submissions";
 
-    function problem($error)
-    {
+    function problem($error) {
         echo "We are very sorry, but there were error(s) found with the form you submitted. ";
         echo "These errors appear below.<br><br>";
         echo $error . "<br><br>";
@@ -15,12 +13,8 @@ if (isset($_POST['Email'])) {
     }
 
     // validation expected data exists
-    if (
-        !isset($_POST['Name']) ||
-        !isset($_POST['Email']) ||
-        !isset($_POST['Message'])
-    ) {
-      problem('We are sorry, but there appears to be a problem with the form you submitted.');
+    if (!isset($_POST['Name']) || !isset($_POST['Email']) || !isset($_POST['Message'])) {
+        problem('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
     $name = $_POST['Name']; // required
@@ -50,9 +44,8 @@ if (isset($_POST['Email'])) {
 
     $email_message = "Form details below.\n\n";
 
-    function clean_string($string)
-    {
-      $bad = array("content-type", "bcc:", "to:", "cc:", "href");
+    function clean_string($string) {
+        $bad = array("content-type", "bcc:", "to:", "cc:", "href");
         return str_replace($bad, "", $string);
     }
 
@@ -62,15 +55,11 @@ if (isset($_POST['Email'])) {
 
     // create email headers
     $headers = 'From: ' . $email . "\r\n" .
-        'Reply-To: ' . $email . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+               'Reply-To: ' . $email . "\r\n" .
+               'X-Mailer: PHP/' . phpversion();
     @mail($email_to, $email_subject, $email_message, $headers);
-?>
-
-    <!-- include your success message below -->
-
-    Thank you for contacting us. We will be in touch with you very soon.
-
-<?php
+    echo "Thank you for contacting us. We will be in touch with you very soon.";
+} else {
+    echo "Method not allowed";
 }
 ?>
