@@ -148,13 +148,3 @@ footer a:hover {
     text-decoration: none;
     cursor: pointer;
 }
-
-/* Add this to your existing CSS file */
-
-.google-form {
-    max-width: 100%;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-}
