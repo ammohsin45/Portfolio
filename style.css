@@ -151,3 +151,8 @@ footer {
     background: none;
     border: none;
 }
+
+/* Make the iframe transparent */
+.google-form iframe {
+    background: transparent;
+}
