@@ -148,7 +148,6 @@ footer {
 .google-form {
     max-width: 100%;
     padding: 20px;
-    background: #fff;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
+    background: none;
+    border: none;
 }
