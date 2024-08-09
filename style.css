@@ -1,6 +1,6 @@
 /* General body styling */
 html, body {
-    background-color: rgb(255, 182, 193);
+    background-color: #f0f4f8; /* Light gray-blue */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ html, body {
 
 /* Heading styling */
 h1, h2, h3 {
-    color: blue;
+    color: #1e3d59; /* Dark navy */
     text-align: center;
     font-size: 24px;
 }
@@ -37,7 +37,7 @@ h1, h2, h3 {
 
 /* Navigation styling */
 nav {
-    background-color: #333;
+    background-color: #333; /* Charcoal gray */
 }
 
 .nav-links {
@@ -61,18 +61,18 @@ nav {
 }
 
 .nav-links li a:hover {
-    background-color: #ddd;
+    background-color: #0ccac4; /* Cyan */
     color: black;
 }
 
 .nav-links li a.active {
-    background-color: #4CAF50;
+    background-color: #1e3d59; /* Dark navy */
     color: white;
 }
 
 /* Footer styling */
 footer {
-    background-color: #333;
+    background-color: #333; /* Charcoal gray */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -156,4 +156,3 @@ footer {
 .google-form iframe {
     background: transparent;
 }
-
