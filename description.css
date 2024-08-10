@@ -90,7 +90,7 @@ footer {
 
 .gallery-item {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px; /* Increased max-width for larger images */
     height: auto;
     position: relative;
     overflow: hidden;
