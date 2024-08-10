@@ -89,7 +89,8 @@ footer {
 }
 
 .gallery-item {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
     position: relative;
     overflow: hidden;
@@ -163,4 +164,36 @@ footer {
 /* Make the iframe transparent */
 .google-form iframe {
     background: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-item {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .gallery {
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .gallery-item img {
+        object-fit: cover; /* Ensure the image fills the container */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .gallery {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .gallery-item img {
+        object-fit: cover; /* Ensure the image fills the container */
+    }
 }
