@@ -143,3 +143,16 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Google Form styling */
+.google-form {
+    max-width: 100%;
+    padding: 20px;
+    background: none;
+    border: none;
+}
+
+/* Make the iframe transparent */
+.google-form iframe {
+    background: transparent;
+}
