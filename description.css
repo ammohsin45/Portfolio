@@ -89,9 +89,8 @@ footer {
 }
 
 .gallery-item {
-    width: 100%;
-    max-width: 400px; /* Increased max-width for larger images */
-    height: auto;
+    width: 350px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -102,17 +101,18 @@ footer {
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensure the entire image is visible without distortion */
-    display: block;
-    margin: 0 auto;
+    object-fit: cover;
 }
 
-.gallery-item figcaption {
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
     margin-top: 10px;
     color: #333;
     font-size: 14px;
     text-align: center;
-    padding: 5px;
 }
 
 /* Lightbox Styles */
@@ -164,36 +164,4 @@ footer {
 /* Make the iframe transparent */
 .google-form iframe {
     background: transparent;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .gallery-item {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .gallery {
-        gap: 10px; /* Reduce gap for smaller screens */
-    }
-
-    .gallery-item img {
-        object-fit: contain; /* Ensure the entire image is visible on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-item {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .gallery {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
-    }
-
-    .gallery-item img {
-        object-fit: contain; /* Ensure the entire image is visible on smaller screens */
-    }
 }
