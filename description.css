@@ -37,7 +37,7 @@ h1, h2, h3 {
 
 /* Navigation styling */
 nav {
-    background-color: #333; /* Charcoal gray */
+    background-color: #1e3d59; /* Dark navy */
 }
 
 .nav-links {
@@ -66,13 +66,13 @@ nav {
 }
 
 .nav-links li a.active {
-    background-color: #1e3d59; /* Dark navy */
+    background-color: #333; /* Charcoal gray */
     color: white;
 }
 
 /* Footer styling */
 footer {
-    background-color: #333; /* Charcoal gray */
+    background-color: #1e3d59; /* Dark navy */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -83,33 +83,27 @@ footer {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
 }
 
 .gallery-item {
-    width: 100%;
-    max-width: 350px;
-    text-align: center;
+    width: 350px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s;
-    margin-bottom: 20px; /* Space for text below image */
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
 .gallery-item:hover {
     transform: scale(1.05);
-}
-
-.gallery-item p {
-    margin-top: 10px;
-    font-size: 1em;
-    color: #1e3d59; /* Match the text color with headings */
 }
 
 /* Lightbox Styles */
