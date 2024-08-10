@@ -1,69 +1,164 @@
-body {
+/* General body styling */
+html, body {
+    background-color: #f0f4f8; /* Light gray-blue */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
 }
 
+/* Heading styling */
+h1, h2, h3 {
+    color: #1e3d59; /* Dark navy */
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Page container styling */
+#page-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 100%; /* Ensure it takes full height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Content wrap styling */
+#content-wrap {
+    flex-grow: 1;
+    padding: 20px;
+    overflow: auto; /* Allow scrolling within content wrap if necessary */
+}
+
+/* Navigation styling */
 nav {
-    background-color: #333;
-    padding: 10px;
+    background-color: #333; /* Charcoal gray */
 }
 
 .nav-links {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
-.nav-links a {
-    color: #fff;
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
     text-decoration: none;
 }
 
-#page-container {
-    padding: 20px;
+.nav-links li a:hover {
+    background-color: #0ccac4; /* Cyan */
+    color: black;
 }
 
-h1, h2 {
+.nav-links li a.active {
+    background-color: #1e3d59; /* Dark navy */
+    color: white;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333; /* Charcoal gray */
+    color: white;
     text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
 }
 
+/* Gallery styling */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .gallery-item {
-    flex: 1 1 calc(33.333% - 40px);
-    box-sizing: border-box;
+    width: 100%;
+    max-width: 350px;
     text-align: center;
-    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-bottom: 20px; /* Space for text below image */
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
-    max-height: 200px; /* Prevents the image from being too tall */
-    object-fit: contain; /* Ensures the image maintains its aspect ratio */
-    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
 }
 
 .gallery-item p {
     margin-top: 10px;
     font-size: 1em;
-    color: #333;
+    color: #1e3d59; /* Match the text color with headings */
 }
 
-footer {
-    text-align: center;
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Google Form styling */
+.google-form {
+    max-width: 100%;
     padding: 20px;
-    background-color: #f1f1f1;
-    margin-top: 40px;
+    background: none;
+    border: none;
+}
+
+/* Make the iframe transparent */
+.google-form iframe {
+    background: transparent;
 }
