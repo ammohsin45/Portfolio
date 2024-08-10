@@ -83,8 +83,9 @@ footer {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px; /* Increased gap for better spacing */
     justify-content: center;
+    padding: 20px;
 }
 
 .gallery-item {
@@ -94,6 +95,7 @@ footer {
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s;
+    text-align: center; /* Center align the description */
 }
 
 .gallery-item img {
@@ -104,6 +106,13 @@ footer {
 
 .gallery-item:hover {
     transform: scale(1.05);
+}
+
+figcaption {
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
 }
 
 /* Lightbox Styles */
