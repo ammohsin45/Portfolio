@@ -1,167 +1,50 @@
-/* General body styling */
-html, body {
-    background-color: #f0f4f8; /* Light gray-blue */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden; /* Prevent scrolling */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Afia Mohsin</title>
+    <link rel="stylesheet" href="description.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="page-container">
+        <div id="content-wrap">
+            <h2>Experience</h2>
+            <div class="gallery">
+                <figure class="gallery-item">
+                    <img src="https://images.ctfassets.net/7xz1x21beds9/5l6ZKiFO6L9VEESckARnxg/c93bd2fedbbb56632e8db0922b9b3e00/tinywow_tinywow_code-of-conduct-fagerhult-group-fagerhult-group-is-one-of-europes-leading-lighting_5215152_5216316.jpg" alt="Capgemini">
+                    <figcaption>Worked as a Data Analyst, focusing on data-driven decision making and automation.</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://www.tibco.com/blog/wp-content/uploads/2017/05/asurion-blog.png" alt="Asurion">
+                    <figcaption>Gained experience in client services and analytical solutions.</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://media.designrush.com/inspiration_images/345908/conversions/walmart_1-mobile.jpg" alt="Walmart">
+                    <figcaption>Contributed to various retail data analysis projects and revenue forecasting.</figcaption>
+                </figure>
+            </div>
+        </div>
+        <footer id="footer">
+            <p>Author: Afia Mohsin</p>
+            <p><a href="mailto:ammohsin1995@gmail.com">ammohsin1995@gmail.com</a></p>
+        </footer>
+    </div>
 
-/* Heading styling */
-h1, h2, h3 {
-    color: #1e3d59; /* Dark navy */
-    text-align: center;
-    font-size: 24px;
-}
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
-/* Page container styling */
-#page-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
-    height: 100%; /* Ensure it takes full height */
-    overflow: hidden; /* Prevent scrolling */
-}
-
-/* Content wrap styling */
-#content-wrap {
-    flex-grow: 1;
-    padding: 20px;
-    overflow: auto; /* Allow scrolling within content wrap if necessary */
-}
-
-/* Navigation styling */
-nav {
-    background-color: #333; /* Charcoal gray */
-}
-
-.nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-links li {
-    margin: 0 10px;
-}
-
-.nav-links li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-.nav-links li a:hover {
-    background-color: #0ccac4; /* Cyan */
-    color: black;
-}
-
-.nav-links li a.active {
-    background-color: #1e3d59; /* Dark navy */
-    color: white;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333; /* Charcoal gray */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
-}
-
-/* Gallery styling */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Increased gap for better spacing */
-    justify-content: center;
-    padding: 20px;
-}
-
-.gallery-item {
-    width: 350px;
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s;
-    text-align: center; /* Center align the description */
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-figcaption {
-    margin-top: 10px;
-    color: #333;
-    font-size: 14px;
-    text-align: center;
-}
-
-/* Lightbox Styles */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-}
-
-.lightbox-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Google Form styling */
-.google-form {
-    max-width: 100%;
-    padding: 20px;
-    background: none;
-    border: none;
-}
-
-/* Make the iframe transparent */
-.google-form iframe {
-    background: transparent;
-}
+    <script src="gallery.js"></script>
+</body>
+</html>
