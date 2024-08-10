@@ -143,16 +143,3 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-
-/* Description styling */
-.description {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.description p {
-    margin: 10px 0;
-    color: #1e3d59; /* Dark navy */
-    font-size: 18px;
-    line-height: 1.5;
-}
