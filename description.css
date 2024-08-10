@@ -1,6 +1,6 @@
 /* General body styling */
 html, body {
-    background-color: #f0f4f8; /* Light gray-blue */
+    background-color: #f0f4f8;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,12 +8,11 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Heading styling */
 h1, h2, h3 {
-    color: #1e3d59; /* Dark navy */
+    color: #1e3d59;
     text-align: center;
     font-size: 24px;
 }
@@ -24,20 +23,19 @@ h1, h2, h3 {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    height: 100%; /* Ensure it takes full height */
-    overflow: hidden; /* Prevent scrolling */
+    height: 100%;
 }
 
 /* Content wrap styling */
 #content-wrap {
     flex-grow: 1;
     padding: 20px;
-    overflow: auto; /* Allow scrolling within content wrap if necessary */
+    overflow: auto;
 }
 
 /* Navigation styling */
 nav {
-    background-color: #333; /* Charcoal gray */
+    background-color: #333;
 }
 
 .nav-links {
@@ -61,18 +59,18 @@ nav {
 }
 
 .nav-links li a:hover {
-    background-color: #0ccac4; /* Cyan */
+    background-color: #0ccac4;
     color: black;
 }
 
 .nav-links li a.active {
-    background-color: #1e3d59; /* Dark navy */
+    background-color: #1e3d59;
     color: white;
 }
 
 /* Footer styling */
 footer {
-    background-color: #333; /* Charcoal gray */
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -83,14 +81,14 @@ footer {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
+    padding: 20px;
 }
 
 .gallery-item {
     width: 350px;
-    height: auto;
-    position: relative;
+    height: 250px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s;
@@ -98,24 +96,30 @@ footer {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    margin-bottom: 10px;
 }
 
 .gallery-item:hover {
     transform: scale(1.05);
 }
 
-/* Description styling */
+/* Description for each company */
 .description {
     text-align: center;
-    margin-bottom: 20px;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 0;
 }
 
-.description p {
-    margin: 10px 0;
-    color: #1e3d59; /* Dark navy */
-    font-size: 18px;
-    line-height: 1.5;
+/* Remove any unnecessary margins or padding from body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Remove the white line with an 'x' at the bottom */
+::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
 }
