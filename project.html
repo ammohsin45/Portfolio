@@ -31,9 +31,9 @@
                     <h3>Python Data Pipeline</h3>
                     <p>Description: Created a data pipeline in Python to extract, transform, and load (ETL) large datasets, enhancing data processing efficiency by 30%.</p>
                     <div class="image-gallery">
-                        <img src="MovieAnalysis/static/correlation_matrix.png" alt="Correlation Matrix" onclick="openLightbox(this)">
-                        <img src="MovieAnalysis/static/vote_distribution.png" alt="Vote Distribution" onclick="openLightbox(this)">
-                        <img src="MovieAnalysis/static/budget_vs_revenue.png" alt="Budget vs Revenue" onclick="openLightbox(this)">
+                        <img src="MovieAnalysis/static/correlation_matrix.png" alt="Correlation Matrix">
+                        <img src="MovieAnalysis/static/vote_distribution.png" alt="Vote Distribution">
+                        <img src="MovieAnalysis/static/budget_vs_revenue.png" alt="Budget vs Revenue">
                     </div>
                 </div>
             </div>
@@ -44,23 +44,30 @@
         </footer>
     </div>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <span class="close" onclick="closeLightbox()">&times;</span>
-        <div class="lightbox-content">
-            <img id="lightbox-img" src="">
-        </div>
-    </div>
-
+    <!-- Lightbox Script -->
     <script>
-        function openLightbox(img) {
-            document.getElementById("lightbox").style.display = "block";
-            document.getElementById("lightbox-img").src = img.src;
-        }
+    document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll(".image-gallery img");
+        const lightbox = document.createElement("div");
+        lightbox.id = "lightbox";
+        document.body.appendChild(lightbox);
 
-        function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
-        }
+        images.forEach(image => {
+            image.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                const img = document.createElement("img");
+                img.src = image.src;
+                while (lightbox.firstChild) {
+                    lightbox.removeChild(lightbox.firstChild);
+                }
+                lightbox.appendChild(img);
+            });
+        });
+
+        lightbox.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+    });
     </script>
 </body>
 </html>
