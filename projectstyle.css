@@ -5,10 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Heading styling */
@@ -24,15 +21,13 @@ h1, h2, h3 {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    height: 100%; /* Ensure it takes full height */
-    overflow: hidden; /* Prevent scrolling */
+    min-height: 100vh;
 }
 
 /* Content wrap styling */
 #content-wrap {
     flex-grow: 1;
     padding: 20px;
-    overflow: auto; /* Allow scrolling within content wrap if necessary */
 }
 
 /* Navigation styling */
@@ -76,16 +71,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: auto;
-}
-
-footer a {
-    color: white;
-    text-decoration: none; /* Optional: remove underline from the link */
-}
-
-footer a:hover {
-    color: #0ccac4; /* Optional: change color on hover */
 }
 
 /* Gallery styling for project.html */
@@ -99,24 +84,21 @@ footer a:hover {
 
 .project-item {
     width: 100%;
-    max-width: 600px; /* Adjusted width for responsive design */
-    position: relative;
-    overflow: hidden;
+    max-width: 600px;
     text-align: center;
 }
 
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Adjust gap for spacing */
+    gap: 10px;
     justify-content: center;
 }
 
 .image-gallery img {
     width: 100%;
-    max-width: 250px; /* Adjusted max-width for larger image display */
-    height: auto; /* Maintain aspect ratio without stretching */
-    display: block;
+    max-width: 250px;
+    height: auto;
     cursor: pointer;
 }
 
@@ -138,30 +120,6 @@ footer a:hover {
     display: block;
 }
 
-#lightbox img {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-#lightbox .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-#lightbox .close:hover,
-#lightbox .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .project-item {
@@ -169,11 +127,11 @@ footer a:hover {
     }
 
     .image-gallery img {
-        max-width: 150px; /* Adjusted for smaller screens */
+        max-width: 150px;
     }
 
     .project-gallery {
-        gap: 15px; /* Adjust gap for smaller screens */
+        gap: 15px;
     }
 }
 
@@ -183,11 +141,11 @@ footer a:hover {
     }
 
     .image-gallery img {
-        max-width: 120px; /* Further adjust for very small screens */
+        max-width: 120px;
     }
 
     .project-gallery {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
         align-items: center;
     }
 }
@@ -202,9 +160,9 @@ footer a:hover {
 }
 
 #content-wrap {
-    overflow: hidden; /* Ensure no overflow beyond the content */
+    overflow: auto;
 }
 
 body > div:last-child {
-    display: none; /* Hides any stray elements causing the issue */
+    display: none;
 }
