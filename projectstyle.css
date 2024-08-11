@@ -8,7 +8,7 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Heading styling */
@@ -24,7 +24,8 @@ h1, h2, h3 {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    height: 100%; /* Ensure it takes full height */
+    height: auto; /* Changed from 100% to auto to allow content to expand */
+    overflow: visible; /* Changed from hidden to visible */
 }
 
 /* Content wrap styling */
@@ -32,6 +33,7 @@ h1, h2, h3 {
     flex-grow: 1;
     padding: 20px;
     overflow: auto; /* Allow scrolling within content wrap if necessary */
+    padding-bottom: 60px; /* Add padding to ensure content does not hide under footer */
 }
 
 /* Navigation styling */
@@ -75,9 +77,13 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: relative; /* Ensure footer stays at the bottom without overlapping content */
     margin-top: auto;
+    width: 100%;
+    clear: both; /* Ensure footer clears any floated elements */
 }
 
+/* Footer link styling */
 footer a {
     color: white;
     text-decoration: none; /* Optional: remove underline from the link */
@@ -189,21 +195,4 @@ footer a:hover {
         flex-direction: column; /* Stack items vertically */
         align-items: center;
     }
-}
-
-/* Fix the white line with the 'X' underneath the footer */
-#page-container::after {
-    content: "";
-    display: block;
-    clear: both;
-    height: 0;
-    visibility: hidden;
-}
-
-#content-wrap {
-    overflow: hidden; /* Ensure no overflow beyond the content */
-}
-
-body > div:last-child {
-    display: none; /* Hides any stray elements causing the issue */
 }
