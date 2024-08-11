@@ -8,7 +8,7 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Heading styling */
@@ -24,7 +24,8 @@ h1, h2, h3 {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    min-height: 100vh; /* Ensure the container covers the full viewport height */
+    height: 100%; /* Ensure it takes full height */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Content wrap styling */
@@ -98,7 +99,7 @@ footer a:hover {
 
 .project-item {
     width: 100%;
-    max-width: 600px; /* Increased width to make items larger */
+    max-width: 600px; /* Adjusted width for responsive design */
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -113,18 +114,52 @@ footer a:hover {
 
 .image-gallery img {
     width: 100%;
-    max-width: 100%; /* Ensure images are responsive */
+    max-width: 250px; /* Adjusted max-width for larger image display */
     height: auto; /* Maintain aspect ratio without stretching */
     display: block;
     cursor: pointer;
 }
 
-/* Remove white line under the footer */
-body::after {
-    content: '';
+/* Lightbox Styles */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+#lightbox.active {
     display: block;
-    height: 0;
-    clear: both;
+}
+
+#lightbox img {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#lightbox .close:hover,
+#lightbox .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Responsive adjustments */
@@ -134,7 +169,7 @@ body::after {
     }
 
     .image-gallery img {
-        max-width: 100%; /* Ensure responsiveness */
+        max-width: 150px; /* Adjusted for smaller screens */
     }
 
     .project-gallery {
@@ -148,11 +183,28 @@ body::after {
     }
 
     .image-gallery img {
-        max-width: 100%; /* Ensure responsiveness */
+        max-width: 120px; /* Further adjust for very small screens */
     }
 
     .project-gallery {
         flex-direction: column; /* Stack items vertically */
         align-items: center;
     }
+}
+
+/* Fix the white line with the 'X' underneath the footer */
+#page-container::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+#content-wrap {
+    overflow: hidden; /* Ensure no overflow beyond the content */
+}
+
+body > div:last-child {
+    display: none; /* Hides any stray elements causing the issue */
 }
