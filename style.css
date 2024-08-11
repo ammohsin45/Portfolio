@@ -83,29 +83,28 @@ footer {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px; /* Increased gap for better spacing */
     justify-content: center;
+    padding: 20px;
 }
 
 .gallery-item {
-    width: 350px;
-    height: auto; /* Adjust the height to auto */
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s;
+    text-align: center; /* Center align the description */
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto; /* Allow the image to maintain its aspect ratio */
-    object-fit: contain; /* Ensure the entire image is visible without cropping */
+    height: 100%;
+    object-fit: cover; /* Adjust the image to cover the container without distorting */
     display: block;
     margin: 0 auto;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
 }
 
 /* Lightbox Styles */
@@ -146,19 +145,6 @@ footer {
     cursor: pointer;
 }
 
-/* Google Form styling */
-.google-form {
-    max-width: 100%;
-    padding: 20px;
-    background: none;
-    border: none;
-}
-
-/* Make the iframe transparent */
-.google-form iframe {
-    background: transparent;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .gallery-item {
@@ -171,7 +157,7 @@ footer {
     }
 
     .gallery-item img {
-        object-fit: contain; /* Ensure the entire image is visible on smaller screens */
+        object-fit: cover; /* Ensure the entire image is visible on smaller screens */
     }
 }
 
@@ -187,6 +173,6 @@ footer {
     }
 
     .gallery-item img {
-        object-fit: contain; /* Ensure the entire image is visible on smaller screens */
+        object-fit: cover; /* Ensure the entire image is visible on smaller screens */
     }
 }
