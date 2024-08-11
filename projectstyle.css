@@ -1,4 +1,94 @@
-/* General Gallery Styling for Project Page */
+/* General body styling */
+html, body {
+    background-color: #f0f4f8; /* Light gray-blue */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Heading styling */
+h1, h2, h3 {
+    color: #1e3d59; /* Dark navy */
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Page container styling */
+#page-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 100%; /* Ensure it takes full height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Content wrap styling */
+#content-wrap {
+    flex-grow: 1;
+    padding: 20px;
+    overflow: auto; /* Allow scrolling within content wrap if necessary */
+}
+
+/* Navigation styling */
+nav {
+    background-color: #333; /* Charcoal gray */
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: #0ccac4; /* Cyan */
+    color: black;
+}
+
+.nav-links li a.active {
+    background-color: #1e3d59; /* Dark navy */
+    color: white;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333; /* Charcoal gray */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+footer a {
+    color: white;
+    text-decoration: none; /* Optional: remove underline from the link */
+}
+
+footer a:hover {
+    color: #0ccac4; /* Optional: change color on hover */
+}
+
+/* Gallery styling for project.html */
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -24,21 +114,20 @@
     margin-bottom: 10px; /* Space below each image */
 }
 
-/* Responsive adjustments for project gallery */
+/* Responsive adjustments for project.html */
 @media (max-width: 768px) {
     .project-item {
         max-width: 100%;
     }
 
     .project-gallery {
-        gap: 10px;
+        gap: 10px; /* Reduce gap for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .project-gallery {
-        flex-direction: column; /* Stack items vertically on small screens */
+        flex-direction: column; /* Stack items vertically */
         align-items: center;
     }
 }
-
