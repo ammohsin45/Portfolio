@@ -25,7 +25,6 @@ h1, h2, h3 {
     flex-grow: 1;
     justify-content: space-between;
     min-height: 100vh; /* Ensure the container covers the full viewport height */
-    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Content wrap styling */
@@ -114,9 +113,18 @@ footer a:hover {
 
 .image-gallery img {
     width: 100%;
-    max-width: 200px; /* Adjusted max-width to make images larger */
+    max-width: 100%; /* Ensure images are responsive */
     height: auto; /* Maintain aspect ratio without stretching */
     display: block;
+    cursor: pointer;
+}
+
+/* Remove white line under the footer */
+body::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 /* Responsive adjustments */
@@ -126,7 +134,7 @@ footer a:hover {
     }
 
     .image-gallery img {
-        max-width: 150px; /* Reduce max-width for smaller screens */
+        max-width: 100%; /* Ensure responsiveness */
     }
 
     .project-gallery {
@@ -140,7 +148,7 @@ footer a:hover {
     }
 
     .image-gallery img {
-        max-width: 120px; /* Further reduce max-width for very small screens */
+        max-width: 100%; /* Ensure responsiveness */
     }
 
     .project-gallery {
