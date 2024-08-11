@@ -111,7 +111,7 @@ footer a:hover {
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensure the image fits within the container without cropping */
+    object-fit: cover; /* Ensure the image fits within the container without distorting */
     display: block;
     margin: 0 auto;
 }
@@ -166,7 +166,7 @@ footer a:hover {
     }
 
     .gallery-item img {
-        object-fit: contain; /* Ensure the entire image is visible on smaller screens */
+        object-fit: cover; /* Ensure the entire image is visible on smaller screens */
     }
 }
 
@@ -182,6 +182,6 @@ footer a:hover {
     }
 
     .gallery-item img {
-        object-fit: contain; /* Ensure the entire image is visible on smaller screens */
+        object-fit: cover; /* Ensure the entire image is visible on smaller screens */
     }
 }
