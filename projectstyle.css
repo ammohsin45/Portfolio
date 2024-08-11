@@ -99,19 +99,17 @@ footer a:hover {
 
 .project-item {
     width: 100%;
-    max-width: 350px; /* Consistent with index.html gallery-item width */
-    height: 250px; /* Maintain a fixed height */
+    max-width: 350px; /* Match the width of gallery items in index.html */
+    height: auto; /* Adjust height based on content */
     position: relative;
     overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better separation */
 }
 
 .project-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
+    height: auto; /* Maintain aspect ratio without stretching */
     display: block;
     margin: 0 auto;
 }
@@ -120,7 +118,7 @@ footer a:hover {
 @media (max-width: 768px) {
     .project-item {
         max-width: 100%;
-        height: 250px; /* Keep height consistent on smaller screens */
+        height: auto; /* Adjust height for smaller screens */
     }
 
     .project-gallery {
@@ -131,7 +129,7 @@ footer a:hover {
 @media (max-width: 480px) {
     .project-item {
         max-width: 100%;
-        height: 250px; /* Keep height consistent on smaller screens */
+        height: auto; /* Adjust height for very small screens */
     }
 
     .project-gallery {
