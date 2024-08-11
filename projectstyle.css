@@ -8,7 +8,6 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Heading styling */
@@ -24,8 +23,7 @@ h1, h2, h3 {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    height: auto; /* Changed from 100% to auto to allow content to expand */
-    overflow: visible; /* Changed from hidden to visible */
+    min-height: 100vh; /* Ensure it takes full height */
 }
 
 /* Content wrap styling */
@@ -77,10 +75,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: relative; /* Ensure footer stays at the bottom without overlapping content */
-    margin-top: auto;
     width: 100%;
-    clear: both; /* Ensure footer clears any floated elements */
 }
 
 /* Footer link styling */
