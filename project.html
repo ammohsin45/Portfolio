@@ -11,7 +11,7 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="project.html" class="active">Projects</a></li>
+            <li><a href="project.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -31,9 +31,9 @@
                     <h3>Python Data Pipeline</h3>
                     <p>Description: Created a data pipeline in Python to extract, transform, and load (ETL) large datasets, enhancing data processing efficiency by 30%.</p>
                     <div class="image-gallery">
-                        <a href="#img1"><img src="MovieAnalysis/static/correlation_matrix.png" alt="Correlation Matrix"></a>
-                        <a href="#img2"><img src="MovieAnalysis/static/vote_distribution.png" alt="Vote Distribution"></a>
-                        <a href="#img3"><img src="MovieAnalysis/static/budget_vs_revenue.png" alt="Budget vs Revenue"></a>
+                        <img src="MovieAnalysis/static/correlation_matrix.png" alt="Correlation Matrix">
+                        <img src="MovieAnalysis/static/vote_distribution.png" alt="Vote Distribution">
+                        <img src="MovieAnalysis/static/budget_vs_revenue.png" alt="Budget vs Revenue">
                     </div>
                 </div>
             </div>
@@ -44,15 +44,30 @@
         </footer>
     </div>
 
-    <!-- Lightbox for full-size images -->
-    <div id="img1" class="lightbox">
-        <img src="MovieAnalysis/static/correlation_matrix.png" alt="Correlation Matrix">
-    </div>
-    <div id="img2" class="lightbox">
-        <img src="MovieAnalysis/static/vote_distribution.png" alt="Vote Distribution">
-    </div>
-    <div id="img3" class="lightbox">
-        <img src="MovieAnalysis/static/budget_vs_revenue.png" alt="Budget vs Revenue">
-    </div>
+    <!-- Lightbox Script -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll(".image-gallery img");
+        const lightbox = document.createElement("div");
+        lightbox.id = "lightbox";
+        document.body.appendChild(lightbox);
+
+        images.forEach(image => {
+            image.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                const img = document.createElement("img");
+                img.src = image.src;
+                while (lightbox.firstChild) {
+                    lightbox.removeChild(lightbox.firstChild);
+                }
+                lightbox.appendChild(img);
+            });
+        });
+
+        lightbox.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+    });
+    </script>
 </body>
 </html>
