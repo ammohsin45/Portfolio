@@ -1,6 +1,6 @@
 /* General body styling */
 html, body {
-    background-color: #f0f4f8;
+    background-color: #f0f4f8; /* Light gray-blue */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,12 +8,12 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Heading styling */
 h1, h2, h3 {
-    color: #1e3d59;
+    color: #1e3d59; /* Dark navy */
     text-align: center;
     font-size: 24px;
 }
@@ -24,20 +24,20 @@ h1, h2, h3 {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100vh; /* Ensure the container covers the full viewport height */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Content wrap styling */
 #content-wrap {
     flex-grow: 1;
     padding: 20px;
-    overflow: auto;
+    overflow: auto; /* Allow scrolling within content wrap if necessary */
 }
 
 /* Navigation styling */
 nav {
-    background-color: #333;
+    background-color: #333; /* Charcoal gray */
 }
 
 .nav-links {
@@ -61,18 +61,18 @@ nav {
 }
 
 .nav-links li a:hover {
-    background-color: #0ccac4;
+    background-color: #0ccac4; /* Cyan */
     color: black;
 }
 
 .nav-links li a.active {
-    background-color: #1e3d59;
+    background-color: #1e3d59; /* Dark navy */
     color: white;
 }
 
 /* Footer styling */
 footer {
-    background-color: #333;
+    background-color: #333; /* Charcoal gray */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -81,25 +81,25 @@ footer {
 
 footer a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Optional: remove underline from the link */
 }
 
 footer a:hover {
-    color: #0ccac4;
+    color: #0ccac4; /* Optional: change color on hover */
 }
 
 /* Gallery styling for project.html */
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Adjust gap for spacing */
     justify-content: center;
     padding: 20px;
 }
 
 .project-item {
     width: 100%;
-    max-width: 600px;
+    max-width: 600px; /* Increased width to make items larger */
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -108,59 +108,15 @@ footer a:hover {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 10px; /* Adjust gap for spacing */
     justify-content: center;
 }
 
 .image-gallery img {
     width: 100%;
-    max-width: 300px;
-    height: auto;
+    max-width: 200px; /* Adjusted max-width to make images larger */
+    height: auto; /* Maintain aspect ratio without stretching */
     display: block;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* Lightbox Styles */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.lightbox-content {
-    position: relative;
-    margin: auto;
-    width: 80%;
-    max-width: 900px;
-}
-
-.lightbox-content img {
-    width: 100%;
-    height: auto;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #bbb;
 }
 
 /* Responsive adjustments */
@@ -170,11 +126,11 @@ footer a:hover {
     }
 
     .image-gallery img {
-        max-width: 200px;
+        max-width: 150px; /* Reduce max-width for smaller screens */
     }
 
     .project-gallery {
-        gap: 15px;
+        gap: 15px; /* Adjust gap for smaller screens */
     }
 }
 
@@ -184,11 +140,11 @@ footer a:hover {
     }
 
     .image-gallery img {
-        max-width: 150px;
+        max-width: 120px; /* Further reduce max-width for very small screens */
     }
 
     .project-gallery {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
         align-items: center;
     }
 }
