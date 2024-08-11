@@ -79,6 +79,15 @@ footer {
     margin-top: auto;
 }
 
+footer a {
+    color: white;
+    text-decoration: none; /* Optional: remove underline from the link */
+}
+
+footer a:hover {
+    color: #0ccac4; /* Optional: change color on hover */
+}
+
 /* Gallery styling */
 .gallery {
     display: flex;
