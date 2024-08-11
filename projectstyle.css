@@ -99,66 +99,52 @@ footer a:hover {
 
 .project-item {
     width: 100%;
-    max-width: 350px; /* Match the width of gallery items in index.html */
-    height: auto; /* Adjust height based on content */
+    max-width: 600px; /* Increased width to make items larger */
     position: relative;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better separation */
 }
 
-/* Specific styling for the gallery of images */
-.project-item img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio without stretching */
-    display: block;
-    margin: 0 auto;
-}
-
-/* Additional gallery styling for images */
-.project-item .image-gallery {
+.image-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Adjust gap between images */
+    gap: 10px; /* Adjust gap for spacing */
     justify-content: center;
 }
 
-.project-item .image-gallery img {
+.image-gallery img {
     width: 100%;
-    max-width: 100px; /* Limit max width of images */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure images cover the container */
+    max-width: 200px; /* Adjusted max-width to make images larger */
+    height: auto; /* Maintain aspect ratio without stretching */
+    display: block;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .project-item {
         max-width: 100%;
-        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .image-gallery img {
+        max-width: 150px; /* Reduce max-width for smaller screens */
     }
 
     .project-gallery {
-        gap: 10px; /* Reduce gap for smaller screens */
-    }
-
-    .project-item .image-gallery img {
-        max-width: 80px; /* Adjust size for smaller screens */
+        gap: 15px; /* Adjust gap for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .project-item {
         max-width: 100%;
-        height: auto; /* Adjust height for very small screens */
+    }
+
+    .image-gallery img {
+        max-width: 120px; /* Further reduce max-width for very small screens */
     }
 
     .project-gallery {
         flex-direction: column; /* Stack items vertically */
         align-items: center;
     }
-
-    .project-item .image-gallery img {
-        max-width: 60px; /* Adjust size for very small screens */
-    }
 }
-
